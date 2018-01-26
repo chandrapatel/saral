@@ -1,0 +1,23 @@
+/* CSS for Gutenberg Editor */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+.editor-visual-editor a {
+    text-decoration: none;
+    color: royalblue;
+}
+
+.editor-visual-editor, .editor-visual-editor p {
+    font-family: sans-serif;
+}
+
+textarea.editor-post-title__input {
+    text-align: center;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+
+.wp-block-gb-more-from-widget img, .wp-block-gbrp-related-posts img {
+	height: 140px;
+}
