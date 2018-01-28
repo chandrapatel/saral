@@ -149,8 +149,6 @@ body.archive .site-main .page-header {
 }
 
 
-
-
 /* Blocks CSS */
 .entry-content p,
 .entry-content h1,
@@ -281,10 +279,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   }
 }
 
-.wp-block-gb-more-from-widget img, .wp-block-gbrp-related-posts img {
-	height: 140px;
-}
-
 
 /* Media Query */
 /* 
@@ -348,7 +342,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 ##Device = Low Resolution Tablets, Mobiles (Landscape)
 ##Screen = B/w 481px to 767px
 */
-
 @media (min-width: 481px) and (max-width: 767px) {
 
     .site, body.home .site-main, body.archive .site-main {
@@ -370,7 +363,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 ##Device = Most of the Smartphones Mobiles (Portrait)
 ##Screen = B/w 320px to 479px
 */
-
 @media (min-width: 320px) and (max-width: 480px) {
 
     .site, body.home .site-main, body.archive .site-main {
