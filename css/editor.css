@@ -8,11 +8,11 @@ h1, h2, h3, h4, h5, h6 {
     color: royalblue;
 }
 
-.editor-visual-editor, .editor-visual-editor p {
+.edit-post-visual-editor, .edit-post-visual-editor p {
     font-family: sans-serif;
 }
 
-textarea.editor-post-title__input {
+.editor-post-title textarea.editor-post-title__input {
     text-align: center;
     font-weight: 300;
     font-family: sans-serif;
