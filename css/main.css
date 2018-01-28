@@ -11,9 +11,9 @@ a:visited {
 /* Main Page Container */
 .site {
     margin: 0 auto;
-    width: 60rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    max-width: 60rem;
+    /*margin-top: 20px;
+    margin-bottom: 20px;*/
     padding: 0 1rem 0 1rem;
 
     -webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.13);
@@ -53,13 +53,12 @@ body.home .site-header, body.archive .site-header {
     font-style: oblique;
 }
 
-/* Home Page and Archive Page */
+/* Home, Archive and Single Page */
 .site-content {
     grid-column-start: 1;
     grid-column-end: 4;
 }
-.site-content .content-area {
-}
+
 .site-content .widget-area {
     grid-column-start: 3;
     grid-row-start: 1;
@@ -175,8 +174,8 @@ body.archive .site-main .page-header {
 iframe {
   margin: 1.5em auto;
   max-width: 740px;
-  padding-left: 20px;
-  padding-right: 20px;
+  /*padding-left: 20px;
+  padding-right: 20px;*/
 }
 
 .entry-content ul,
@@ -284,4 +283,107 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .wp-block-gb-more-from-widget img, .wp-block-gbrp-related-posts img {
 	height: 140px;
+}
+
+
+/* Media Query */
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+/*@media (min-width: 1281px) {
+  
+    
+}*/
+  
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+
+/*@media (min-width: 1025px) and (max-width: 1280px) {
+
+
+
+}*/
+
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .site, body.home .site-main, body.archive .site-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .site-header, .site-content, .site-footer, .navigation.pagination {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+}
+
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .site, body.home .site-main, body.archive .site-main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .site-header, .site-content, .site-footer, .navigation.pagination {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+}
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .site, body.home .site-main, body.archive .site-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .site-header, .site-content, .site-footer, .navigation.pagination {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .site, body.home .site-main, body.archive .site-main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .site-header, .site-content, .site-footer, .navigation.pagination {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    ul {
+        padding: 0;
+    }
+
 }
