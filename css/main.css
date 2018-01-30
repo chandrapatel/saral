@@ -168,12 +168,16 @@ body.archive .site-main .page-header {
 .wp-block-verse,
 iframe,
 div.sharedaddy,
-div.jp-relatedposts,
 pre {
   margin: 1.5em auto;
   max-width: 740px;
   /*padding-left: 20px;
   padding-right: 20px;*/
+}
+
+div.jp-relatedposts {
+    margin: 1.5em auto !important;
+    max-width: 740px !important;
 }
 
 .entry-content ul,
