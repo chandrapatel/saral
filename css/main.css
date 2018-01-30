@@ -166,7 +166,10 @@ body.archive .site-main .page-header {
 .wp-block-preformatted,
 .wp-block-code,
 .wp-block-verse,
-iframe {
+iframe,
+div.sharedaddy,
+div.jp-relatedposts,
+pre {
   margin: 1.5em auto;
   max-width: 740px;
   /*padding-left: 20px;
