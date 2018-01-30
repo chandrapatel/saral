@@ -80,6 +80,9 @@ if ( ! function_exists( 'saral_setup' ) ) :
 			'flex-height' => true,
 		) );
 
+		// Image sizes
+		add_image_size( 'post-thumbnail', 300, 169, true );
+
 		// Theme support for Gutenberg.
 		add_theme_support( 'align-wide' );
 		//add_theme_support( 'align-full' );

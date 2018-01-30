@@ -80,9 +80,6 @@ body.home .site-main article, body.archive .site-main article {
 body.home .site-main article .entry-header, body.archive .site-main article .entry-header {
     margin-bottom: 10px;
 }
-body.home .site-main article .entry-header img, body.archive .site-main article .entry-header img {
-    height: 188px;
-}
 body.home .site-main article .entry-title, body.archive .site-main article .entry-title {
     font-size: 20px;
 }
