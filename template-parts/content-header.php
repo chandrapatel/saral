@@ -10,14 +10,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+	<?php saral_post_thumbnail(); ?>
+	
 	<header class="entry-header">
 		<?php
-		saral_post_thumbnail();
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
 		if ( 'post' === get_post_type() ) {
 		?>
@@ -28,8 +26,6 @@
 		}
 		?>
 	</header><!-- .entry-header -->
-
-	<?php //saral_post_thumbnail(); ?>
 
 	<footer class="entry-footer">
 		<?php saral_entry_footer(); ?>

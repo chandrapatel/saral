@@ -85,7 +85,7 @@ if ( ! function_exists( 'saral_setup' ) ) :
 
 		// Theme support for Gutenberg.
 		add_theme_support( 'align-wide' );
-		//add_theme_support( 'align-full' );
+		add_theme_support( 'align-full' );
 	}
 endif;
 add_action( 'after_setup_theme', 'saral_setup' );
@@ -173,3 +173,22 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/**
+ * Don't allow all CORS.
+ */
+function wp_rest_not_allow_all_cors() {
+
+	// Remove the default filter.
+	remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
+
+	// Add a Custom filter.
+	add_filter( 'rest_pre_serve_request', function( $value ) {
+		header( 'Access-Control-Allow-Origin: ' . esc_url_raw( site_url() ) );
+		header( 'Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE' );
+		header( 'Access-Control-Allow-Credentials: true' );
+		return $value;
+	});
+
+}
+add_action( 'rest_api_init', 'wp_rest_not_allow_all_cors', 15 );

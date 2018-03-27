@@ -568,7 +568,7 @@ a:hover, a:active {
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		display: inline-block;
 	}
 }
 
